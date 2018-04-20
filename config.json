@@ -8,7 +8,8 @@
   "readAbleFormatDate": "MMMM Do YYYY, h:mm:ss a",
   "dbFormatDate": "YYYY-MM-DD H:mm:ss",
   "botActivity" : "Playing with Ram",
-	"cotdURL" : "https://ws-tcg.com",
+	"cotdURL" : "https://ws-tcg.com/todays-card/",
+	"wsURL" : "https://ws-tcg.com",
   "currencyliveQuery": {
     "currencies": ["JPY", "MYR", "AUD", "SGD", "THB", "TWD", "CNY"]
   },
