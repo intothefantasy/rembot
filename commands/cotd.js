@@ -5,8 +5,9 @@ const moment = require('moment-timezone');
 
 function cotdDateFormat(imgURL){
   let date = imgURL.substring(imgURL.lastIndexOf('/')+1, imgURL.lastIndexOf('_'));
-  console.log("convert date => "+moment.tz(date, config.timeZone).format(config.cotdDateFormat));
+  //console.log("convert date => "+moment.tz(date, config.timeZone).format(config.cotdDateFormat));
   //console.log("convert date => "+date);
+  return moment.tz(date, config.timeZone).format(config.cotdDateFormat);
 }
 
 module.exports = {
@@ -19,7 +20,6 @@ module.exports = {
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
-        cotdDateFormat(imgURL);
         msg.reply(msg.channel.send({
           embed: {
             color: 3447003,
@@ -29,7 +29,7 @@ module.exports = {
             },
             fields: [{
               name: "Date",
-              value: moment().tz(config.timeZone).format(config.cotdDateFormat).toString()
+              value: cotdDateFormat(imgURL).toString()
             }],
             timestamp: new Date(),
             footer: {
