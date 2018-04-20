@@ -16,7 +16,7 @@ module.exports = {
         msg.reply(msg.channel.send({
           embed: {
             color: 3447003,
-            description: ":flag_my: Malaysia Currency Converter",
+            description: "Weiss Schwarz COTD",
             "image": {
               "url": config.wsURL+""+imgURL
             },
