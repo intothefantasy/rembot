@@ -3,8 +3,8 @@ const snekFetch = require('snekfetch');
 const cheerio = require('cheerio');
 const moment = require('moment-timezone');
 
-function cotdDateFormat(imgURL){
-  let date = imgURL.substring(imgURL.lastIndexOf('/')+1, imgURL.lastIndexOf('_'));
+function cotdDateFormat(imgURL) {
+  let date = imgURL.substring(imgURL.lastIndexOf('/') + 1, imgURL.lastIndexOf('_'));
   //console.log("convert date => "+moment.tz(date, config.timeZone).format(config.cotdDateFormat));
   //console.log("convert date => "+date);
   return moment.tz(date, config.timeZone).format(config.cotdDateFormat);
@@ -25,7 +25,7 @@ module.exports = {
             color: 3447003,
             description: "Weiss Schwarz COTD",
             "image": {
-              "url": config.wsURL+""+imgURL
+              "url": config.wsURL + "" + imgURL
             },
             fields: [{
               name: "Date",
