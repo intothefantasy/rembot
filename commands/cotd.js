@@ -1,9 +1,10 @@
 const config = require("../config.json");
 const snekFetch = require('snekfetch');
 const cheerio = require('cheerio');
+const moment = require('moment-timezone');
 
 module.exports = {
-  run: (args, Client, msg, isOwner) => {
+  run: (args, client, msg, isOwner) => {
     snekFetch.get(config.cotdURL).then((result) => {
       let $ = cheerio.load(result.text);
       const img = [];
@@ -12,7 +13,24 @@ module.exports = {
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
-        msg.reply(config.wsURL+""+imgURL);
+        msg.reply(msg.channel.send({
+          embed: {
+            color: 3447003,
+            description: ":flag_my: Malaysia Currency Converter",
+            "image": {
+              "url": config.wsURL+""+imgURL
+            },
+            fields: [{
+              name: "Date",
+              value: moment().tz(config.timeZone).format(config.dbFormatDate).toString()
+            }],
+            timestamp: new Date(),
+            footer: {
+              icon_url: client.user.avatarURL,
+              text: "© remBot"
+            }
+          }
+        }));
       });
     });
   }

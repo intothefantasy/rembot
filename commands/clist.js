@@ -5,7 +5,7 @@ const db = require('../db/main.js');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       db.getOne().then(result =>
-          msg.channel.send({
+          msg.reply({
             embed: {
               color: 3447003,
               description: ":flag_my: Malaysia Currency Converter",
