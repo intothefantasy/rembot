@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const moment = require('moment-timezone');
 
 function cotdDateFormat(imgURL){
-  let date = imgURL.subarray(imgURL.lastIndexOf('/'), imgURL.lastIndexOf('_'))
+  let date = imgURL.substring(imgURL.lastIndexOf('/'), imgURL.lastIndexOf('_'))
   console.log("convert date => "+date);
 }
 
