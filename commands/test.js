@@ -3,20 +3,22 @@ const snekFetch = require('snekfetch');
 const cheerio = require('cheerio');
 
 module.exports = {
-  run : (args, Client, msg, isOwner) => {
-     if(isOwner){
+  run: (args, Client, msg, isOwner) => {
+    if (isOwner) {
+      msg.delete(config.messageDeleteTime);
       snekFetch.get("https://ws-tcg.com/todays-card/").then((result) => {
         let $ = cheerio.load(result.text);
-        //console.log($('img[class=aligncenter]').attr('src'));
         const img = [];
 
         $('img[class=aligncenter]').each(function(i, elem) {
           img[i] = $(this).attr('src');
         });
-        console.log(img);
+        img.forEach(function(imgURL) {
+          msg.reply(config.cotdURL+""+imgURL);
+        });
       });
-     } else {
-         return;
-     }
+    } else {
+      return;
+    }
   }
 };
