@@ -1,0 +1,36 @@
+{
+  "name": "rembot",
+  "description": "Test bot",
+  "main": "node rem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node rem.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "discord.js": "^11.3.2",
+    "enmap": "^2.1.0",
+    "moment": "^2.22.1",
+    "moment-duration-format": "^2.2.2",
+    "cron": "^1.3.0",
+    "dateformat": "^3.0.3",
+    "currency-conversion": "^0.2.4",
+    "moment-timezone": "^0.5.14",
+    "sqlite": "^2.9.1",
+    "snekfetch": "^3.6.4",
+    "cheerio": "^0.22.0",
+    "query-string": "^6.0.0"
+  },
+  "engines": {
+    "node": "8.4.0"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/intothefantasy-discord"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

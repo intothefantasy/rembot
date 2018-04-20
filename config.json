@@ -1,0 +1,19 @@
+{
+	"timeZone"  : "Asia/Kuala_Lumpur",
+	"prefix" : "!",
+  "messageDeleteTime" : 5000,
+	"generalChatID" : "151947800513478656",
+  "ownerName" : "RoryRemMercury",
+  "azurLaneRole": "AzurLane",
+  "readAbleFormatDate": "MMMM Do YYYY, h:mm:ss a",
+  "dbFormatDate": "YYYY-MM-DD H:mm:ss",
+  "botActivity" : "Playing with Ram",
+  "currencyliveQuery": {
+    "currencies": ["JPY", "MYR", "AUD", "SGD", "THB", "TWD", "CNY"]
+  },
+  "cronJobTimeForDailyReset" : "00 00 23 * * 1-7",
+  "cronJobTimeForPvP5Reset" : "00 00 17 * * 1-7",
+  "cronJobTimeForPvP11Reset" : "00 00 11 * * 1-7",
+  "cronJobTimeForUpdateCurrencyDB" : "00 59 * * * 1-7",
+  "currencyDBName" : "./.data/currency_list.sqlite"
+}
