@@ -5,7 +5,7 @@ const moment = require('moment-timezone');
 
 function cotdDateFormat(imgURL){
   let date = imgURL.substring(imgURL.lastIndexOf('/')+1, imgURL.lastIndexOf('_'));
-  console.log("convert date => "+moment.tz(date, config.timeZone));
+  console.log("convert date => "+moment.tz(date, config.timeZone).format(config.cotdDateFormat));
   //console.log("convert date => "+date);
 }
 
