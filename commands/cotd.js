@@ -22,7 +22,7 @@ module.exports = {
             },
             fields: [{
               name: "Date",
-              value: moment().tz(config.timeZone).format(config.dbFormatDate).toString()
+              value: moment().tz(config.timeZone).format(config.cotdDateFormat).toString()
             }],
             timestamp: new Date(),
             footer: {
