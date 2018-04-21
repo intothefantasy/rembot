@@ -41,18 +41,23 @@ module.exports = {
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
-      /*
-      img.forEach(function(imgURL) {
+
+      cotd.forEach(function(cotd) {
         msg.reply(msg.channel.send({
           embed: {
             color: 3447003,
             description: "Weiss Schwarz COTD",
             "image": {
-              "url": config.wsURL + "" + imgURL
+              "url": config.wsURL + "" + cotd.img
             },
-            fields: [{
+            fields: [
+              {
+                name: "Title",
+                value: cotd.title.toString()
+              },
+              {
               name: "Date",
-              value: cotdDateFormat(imgURL).toString()
+              value: cotdDateFormat(cotd.img).toString()
             }],
             timestamp: new Date(),
             footer: {
@@ -62,7 +67,7 @@ module.exports = {
           }
         }));
       });
-      */
+
     });
   }
 };
