@@ -16,6 +16,7 @@ module.exports = {
       let $ = cheerio.load(result.text);
       const img = [];
       let currentElement, data = {};
+      var cotd = [];
 
       $(".entry-content").find("h3").each(function() {
         data[$(this).text()] = [];
@@ -24,17 +25,19 @@ module.exports = {
 
         while (currentElement.next().length && currentElement.next().prop("tagName").indexOf("H") === -1) {
           if (currentElement.next().find("img[class=aligncenter]").length > 0) {
-            data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
+            //data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
+            cotd.push({
+              title: $(this).text(),
+              img: currentElement.next().find("img").first().attr("src")
+            });
           }
 
           currentElement = currentElement.next();
         }
       });
 
-      //console.log(JSON.stringify(data));
-      Object.keys(data).forEach(function (key,value){
-        console.log(key+" = "+value);
-      });
+      console.log(cotd);
+
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
