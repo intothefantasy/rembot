@@ -23,7 +23,7 @@ module.exports = {
           console.log("h3 = "+h3+" img => "+$(this).attr('src'));
         });
       });
-
+*/
 let currentElement, data = {};
 
 $(".entry-content").find("h3").each(function () {
@@ -31,7 +31,7 @@ $(".entry-content").find("h3").each(function () {
 
     currentElement = $(this);
 
-    while(currentElement.next().$('h3').index("H") === -1) {
+    while(currentElement.next().prop("tagName").indexOf("H") === -1) {
         if (currentElement.next().find("img").length > 0) {
             data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
         }
@@ -40,18 +40,6 @@ $(".entry-content").find("h3").each(function () {
     }
 });
 console.log(data);
-
-*/
-
-$(".entry-content").find("h3").each(function () {
-    let h3 = $(this);
-
-    h3.next().find('img[class=aligncenter]').each(function (){
-      console.log($(this).attr('src'));
-      h3 = h3.next();
-    });
-
-});
 
 
       $('img[class=aligncenter]').each(function(i, elem) {
