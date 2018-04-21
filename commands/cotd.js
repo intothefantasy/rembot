@@ -45,11 +45,8 @@ console.log(data);
 
 $(".entry-content").find("h3").each(function () {
     let h3 = $(this);
-    h3.next().find('img[class=aligncenter]').each(function(){
-        console.log("not working => "+$(this).attr('src'));
-        $(this).next();
-    });
-    h3.next();
+
+    console.log(h3.nextAll('img[class=aligncenter]'));
 });
 
 
