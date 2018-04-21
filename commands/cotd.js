@@ -16,9 +16,8 @@ module.exports = {
       let $ = cheerio.load(result.text);
       const img = [];
 
-      console.log("img => "+$('.entry-content').find('h3').find('img').length);
-
       $('img[class=aligncenter]').each(function(i, elem) {
+        console.log($(this).closest('h3'));
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
