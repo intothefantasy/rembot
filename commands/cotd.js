@@ -16,6 +16,8 @@ module.exports = {
       let $ = cheerio.load(result.text);
       const img = [];
 
+      console.log("img => "+$('div[class=entry-content]','h3').nextUntil('h4'));
+
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
