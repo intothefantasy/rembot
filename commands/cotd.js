@@ -17,7 +17,7 @@ module.exports = {
       const img = [];
       let currentElement, data = {};
 
-      $("div[class=entry-content]","h3").each(function() {
+      $('div[class=entry-content]').find('h3').each(function() {
         data[$(this).text()] = [];
 
         currentElement = $(this);
@@ -30,7 +30,6 @@ module.exports = {
           currentElement = currentElement.next();
         }
       });
-
       console.log(data);
 
       $('img[class=aligncenter]').each(function(i, elem) {
