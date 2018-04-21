@@ -16,8 +16,11 @@ module.exports = {
       let $ = cheerio.load(result.text);
       const img = [];
 
+      $('div[class=entry-content]').find('h3').each(function(i, elem) {
+        console.log("test => "+$(this).text());
+      });
+
       $('img[class=aligncenter]').each(function(i, elem) {
-        console.log($(this).prev('h3').text());
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
