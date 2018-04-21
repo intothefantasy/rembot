@@ -46,7 +46,7 @@ console.log(data);
 $(".entry-content").find("h3").each(function () {
     let h3 = $(this);
 
-    console.log(h3.next().find('.aligncenter]').siblings().length);
+    console.log(h3.next().find('.aligncenter').siblings().length);
 
 });
 
