@@ -47,6 +47,7 @@ $(".entry-content").find("h3").each(function () {
     let h3 = $(this);
 
     console.log(h3.nextAll('img[class=aligncenter]').attr('src'));
+    h3.next();
 });
 
 
