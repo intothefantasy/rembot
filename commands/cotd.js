@@ -32,8 +32,8 @@ module.exports = {
       });
 
       //console.log(JSON.stringify(data));
-      Object.keys(data).forEach(function (key){
-        console.log(key);
+      Object.keys(data).forEach(function (key,value){
+        console.log(key+" = "+value);
       });
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
