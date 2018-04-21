@@ -30,7 +30,10 @@ module.exports = {
           currentElement = currentElement.next();
         }
       });
-      console.log("test - "+data);
+
+      data.each(function(i, elem) {
+        console.log("test - "+data[i]);
+      });
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
