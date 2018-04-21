@@ -15,22 +15,10 @@ module.exports = {
     snekFetch.get(config.cotdURL).then((result) => {
       let $ = cheerio.load(result.text);
       const img = [];
-      let currentElement, data = {};
 
-      $('div[class=entry-content]').find('h3').each(function() {
-        data[$(this).text()] = [];
-
-        currentElement = $(this);
-
-        while (currentElement.next().tagName.indexOf("H") === -1) {
-          if (currentElement.next().find("img").length > 0) {
-            data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
-          }
-
-          currentElement = currentElement.next();
-        }
+      $('div[class=entry-content]').find('h3').each(function(i, elem) {
+        console.log("test "+i+" => "+$(this).next('img').attr('src'));
       });
-      console.log(data);
 
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
