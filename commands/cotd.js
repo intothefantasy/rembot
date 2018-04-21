@@ -31,7 +31,7 @@ $(".entry-content").find("h3").each(function () {
 
     currentElement = $(this);
 
-    while(currentElement.next().tagName.index("H") === -1) {
+    while(currentElement.next().$('h3').index("H") === -1) {
         if (currentElement.next().find("img").length > 0) {
             data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
         }
