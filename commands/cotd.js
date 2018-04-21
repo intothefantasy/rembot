@@ -22,10 +22,10 @@ module.exports = {
 
         currentElement = $(this);
 
-        while (currentElement.next().prop("tagName").indexOf("H") === -1) {
+        //while (currentElement.next().prop("tagName").indexOf("H") === -1) {
           if (currentElement.next().find("img").length > 0) {
             data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
-          }
+      //    }
 
           currentElement = currentElement.next();
         }
