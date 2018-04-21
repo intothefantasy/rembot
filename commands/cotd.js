@@ -31,7 +31,10 @@ module.exports = {
         }
       });
 
-      console.log(JSON.stringify(data));
+      //console.log(JSON.stringify(data));
+      data.forEach((item) => {
+        console.log(item);
+      });
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
