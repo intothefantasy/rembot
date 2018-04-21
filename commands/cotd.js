@@ -15,7 +15,7 @@ module.exports = {
     snekFetch.get(config.cotdURL).then((result) => {
       let $ = cheerio.load(result.text);
       const img = [];
-      let currentElement, data = {};
+      let currentElement, data = [];
 
       $(".entry-content").find("h3").each(function() {
         data[$(this).text()] = [];
