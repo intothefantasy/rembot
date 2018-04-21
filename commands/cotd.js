@@ -23,7 +23,7 @@ module.exports = {
           console.log("h3 = "+h3+" img => "+$(this).attr('src'));
         });
       });
-*/
+
 let currentElement, data = {};
 
 $(".entry-content").find("h3").each(function () {
@@ -39,9 +39,9 @@ $(".entry-content").find("h3").each(function () {
         currentElement = currentElement.next();
     }
 });
+
 console.log(data);
-
-
+*/
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
