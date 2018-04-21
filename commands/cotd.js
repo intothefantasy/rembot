@@ -44,7 +44,12 @@ console.log(data);
 */
 
 $(".entry-content").find("h3").each(function () {
-    console.log("not working => "+$(this).nextUntil('h4').find('img').attr('src'));
+    let h3 = $(this);
+    h3.next().find('img[class=aligncenter]').each(function(){
+        console.log("not working => "+$(this).attr('src'));
+        $(this).next();
+    });
+    h3.next();
 });
 
 
