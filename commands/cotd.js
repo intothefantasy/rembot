@@ -43,7 +43,7 @@ console.log(data);
 */
 
       $('img[class=aligncenter]').each(function(i, elem) {
-        console.log($(this).orev().find('h3').text());
+        console.log($(this).prev().find('h3').text());
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
