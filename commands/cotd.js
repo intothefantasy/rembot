@@ -31,9 +31,7 @@ module.exports = {
         }
       });
 
-      data.each(function(i, elem) {
-        console.log("test - "+data[i]);
-      });
+      console.log(JSON.stringify(data));
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
       });
