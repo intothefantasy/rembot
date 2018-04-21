@@ -17,7 +17,11 @@ module.exports = {
       const img = [];
 
       $('div[class=entry-content]').find('h3').each(function(i, elem) {
-        console.log("test "+i+" => "+$(this).next().find("img").attr('src'));
+        //console.log("test "+i+" => "+$(this).next().find("img").attr('src'));
+        let h3 = $(this);
+        h3.next().find("img").each(function () {
+          console.log("h3 = "+h3+" img => "+$(this).attr('src'));
+        });
       });
 
       $('img[class=aligncenter]').each(function(i, elem) {
