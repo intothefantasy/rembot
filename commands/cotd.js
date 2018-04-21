@@ -15,32 +15,15 @@ module.exports = {
     snekFetch.get(config.cotdURL).then((result) => {
       let $ = cheerio.load(result.text);
       const img = [];
-/*
-      $('div[class=entry-content]').find('h3').each(function(i, elem) {
-        //console.log("test "+i+" => "+$(this).next().find("img").attr('src'));
-        let h3 = $(this);
-        h3.next().find("img").each(function () {
-          console.log("h3 = "+h3+" img => "+$(this).attr('src'));
-        });
+      let h3;
+
+      $('.entry-content').next().find('h3').each(function (){
+          h3 = $(this);
+          while(h3.next().find('').length === 0){
+            console.log($(this).attr('src'));
+            h3 = h3.next();
+          }
       });
-*/
-let currentElement, data = {};
-
-$(".entry-content").find("h3").each(function () {
-    data[$(this).text()] = [];
-
-    currentElement = $(this);
-
-    while(currentElement.next().prop("tagName").indexOf("H") === -1) {
-        if (currentElement.next().find("img").length > 0) {
-            data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
-        }
-
-        currentElement = currentElement.next();
-    }
-});
-
-console.log(data);
 
       $('img[class=aligncenter]').each(function(i, elem) {
         img[i] = $(this).attr('src');
