@@ -23,10 +23,9 @@ module.exports = {
 
         while (currentElement.next().length && currentElement.next().prop("tagName").indexOf("H") === -1) {
           if (currentElement.next().find("img[class=aligncenter]").length > 0) {
-            //data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
             cotd.push({
               title: $(this).text(),
-              img: currentElement.next().find("img").first().attr("src")
+              img: currentElement.next().find("img[class=aligncenter]").first().attr("src")
             });
           }
 
