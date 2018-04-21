@@ -14,12 +14,10 @@ module.exports = {
   run: (args, client, msg, isOwner) => {
     snekFetch.get(config.cotdURL).then((result) => {
       let $ = cheerio.load(result.text);
-      const img = [];
-      let currentElement, data = {};
+      let currentElement;
       var cotd = [];
 
       $(".entry-content").find("h3").each(function() {
-        data[$(this).text()] = [];
 
         currentElement = $(this);
 
@@ -35,13 +33,6 @@ module.exports = {
           currentElement = currentElement.next();
         }
       });
-
-      console.log(cotd);
-
-      $('img[class=aligncenter]').each(function(i, elem) {
-        img[i] = $(this).attr('src');
-      });
-
       cotd.forEach(function(cotd) {
         msg.reply(msg.channel.send({
           embed: {
