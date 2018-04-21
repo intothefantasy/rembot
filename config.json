@@ -17,6 +17,6 @@
   "cronJobTimeForDailyReset" : "00 00 23 * * 1-7",
   "cronJobTimeForPvP5Reset" : "00 00 17 * * 1-7",
   "cronJobTimeForPvP11Reset" : "00 00 11 * * 1-7",
-  "cronJobTimeForUpdateCurrencyDB" : "00 59 * * * 1-7",
+  "cronJobTimeForUpdateCurrencyDB" : "00 59 * * * 1-5",
   "currencyDBName" : "./.data/currency_list.sqlite"
 }
