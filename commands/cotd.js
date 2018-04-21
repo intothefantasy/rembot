@@ -19,7 +19,7 @@ module.exports = {
 
       $('.entry-content').next().find('h3').each(function (){
           h3 = $(this);
-          while(h3.next().find('').length === 0){
+          while(h3.next().find('img[class=aligncenter]').length === 0){
             console.log($(this).attr('src'));
             h3 = h3.next();
           }
