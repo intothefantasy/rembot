@@ -17,7 +17,7 @@ module.exports = {
       const img = [];
 
       $('img[class=aligncenter]').each(function(i, elem) {
-        console.log($(this).closest('h3'));
+        console.log($(this).prev('h3').text());
         img[i] = $(this).attr('src');
       });
       img.forEach(function(imgURL) {
