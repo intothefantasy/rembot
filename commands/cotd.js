@@ -22,7 +22,7 @@ module.exports = {
 
         currentElement = $(this);
 
-        while (currentElement.next().find("img[class=aligncenter]").length > 0) {
+        while (currentElement.next().length && currentElement.next().tagName.indexOf("H") === -1) {
           if (currentElement.next().find("img[class=aligncenter]").length > 0) {
             data[$(this).text()].push(currentElement.next().find("img").first().attr("src"));
           }
