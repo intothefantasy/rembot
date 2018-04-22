@@ -1,14 +1,14 @@
 const http = require('http');
 const express = require('express');
 const app = express();
-var dateFormat = require('dateformat');
-var datenow = new Date();
+const moment = require('moment-timezone');
 const db = require('./db/main.js');
+const config = require("./config.json");
 
 app.use(express.static('public'));
 
 app.get("/", (request, response) => {
-  console.log(dateFormat(datenow)+ " Ping Received");
+  console.log( moment().tz(config.timeZone).format(config.cotdDateFormat)+ " Ping Received");
   response.sendStatus(200);
 });
 app.get("/views", (request, response) => {
