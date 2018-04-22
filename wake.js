@@ -8,7 +8,7 @@ const config = require("./config.json");
 app.use(express.static('public'));
 
 app.get("/", (request, response) => {
-  console.log( moment().tz(config.timeZone).format(config.cotdDateFormat)+ " Ping Received");
+  console.log( moment().tz(config.timeZone).format(config.readAbleFormatDate)+ " Ping Received");
   response.sendStatus(200);
 });
 app.get("/views", (request, response) => {
