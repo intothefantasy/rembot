@@ -9,6 +9,7 @@ module.exports = {
           cronTime: config.cronJobTimeForDailyReset,
           onTick: function() {
               client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " Daily/PVP 11pm reset now");
+              console.log("Daily/PVP 11pm reset now");
           },
           start: true,
           timeZone: config.timeZone
@@ -20,6 +21,7 @@ module.exports = {
           cronTime: config.cronJobTimeForPvP5Reset,
           onTick: function() {
               client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " PVP 5pm reset now");
+              console.log("PVP 5pm reset now");
           },
           start: true,
           timeZone: config.timeZone
@@ -31,6 +33,7 @@ module.exports = {
           cronTime: config.cronJobTimeForPvP11Reset,
           onTick: function() {
               client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " PVP 11am reset now");
+              console.log("PVP 11am reset now");
           },
           start: true,
           timeZone: config.timeZone
