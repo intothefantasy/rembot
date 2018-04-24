@@ -8,7 +8,7 @@ function checkFileOwner(filename){
    }
    catch (err)
    {
-       console.log(err);
+       //console.log(err);
        return false;
    }
 }
