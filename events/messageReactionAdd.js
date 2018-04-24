@@ -2,6 +2,9 @@ const config = require("../config.json");
 
 module.exports = {
     run: (reaction, user) => {
-        console.log(reaction.message.id);
+        if (reaction.emoji.name === "❓") {
+            console.log(reaction.users);
+        }
+
     }
 };
