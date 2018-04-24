@@ -1,4 +1,4 @@
-const config = require(".../config.json");
+const config = require(".././config.json");
 const db = require('.../db/main.js');
 
 module.exports = {
