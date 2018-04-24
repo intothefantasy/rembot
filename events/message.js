@@ -2,17 +2,14 @@ const config = require("../config.json");
 const fs = require('fs');
 
 function checkFileOwner(filename){
-    fs.open("../commands/owner/"+filename+".js", 'r', (err, fd) => {
-  if (err) {
-    if (err.code === 'ENOENT') {
-      console.error('myfile does not exist');
-      return false;
-    }
-
-    throw err;
-  }
-    return true;
-});
+    try
+   {
+       return fs.statSync("../commands/owner"+filename+".js").isFile();
+   }
+   catch (err)
+   {
+       return false;
+   }
 }
 
 module.exports = {
