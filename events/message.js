@@ -27,8 +27,15 @@ module.exports = {
         let cmd = msg.content.split(" ")[0].substr(config.prefix.length);
         let args = msg.content.split(" ").slice(1);
         try {
-            console.log(checkFileOwner(cmd));
-            require("../commands/" + cmd).run(args, Client, msg, isOwner);
+            if(checkFileOwner(cmd)){
+                if(isOwner){
+                    require("../commands/owner/" + cmd).run(args, Client, msg, isOwner);
+                } else {
+                    return;
+                }
+            } else{
+                require("../commands/" + cmd).run(args, Client, msg, isOwner);
+            }
         } catch (err) {
             console.log(err);
         }
