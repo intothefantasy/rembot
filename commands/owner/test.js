@@ -25,7 +25,7 @@ module.exports = {
               }
             }
         }).then(function (message) {
-            msg.react(":question:");
+            msg.react("❓");
         });
 
           /*
