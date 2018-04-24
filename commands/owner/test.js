@@ -24,8 +24,10 @@ module.exports = {
                 text: "© remBot"
               }
             }
+        }).then(function (message) {
+            msg.react(":question:");
         });
-        msg.react(":question:");
+
           /*
         msg.delete(config.messageDeleteTime);
         currencyAPI.getLatestUpdate(function(result){
