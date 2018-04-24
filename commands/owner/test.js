@@ -25,7 +25,7 @@ module.exports = {
               }
             }
         });
-        msg.channel.send(client.emojis.find("name", "question").toString());
+        msg.channel.send("<:question:>");
           /*
         msg.delete(config.messageDeleteTime);
         currencyAPI.getLatestUpdate(function(result){
