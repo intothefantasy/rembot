@@ -15,6 +15,9 @@ module.exports = {
         client.on("message", msg => {
             load_event("message").run(msg, client);
         });
+        client.on("messageReactionAdd", msg => {
+            load_event("messageReactionAdd").run(msg, client);
+        });
     },
     runScheduler: (scheduler, client) => {
         load_event("scheduler").run(scheduler, client);
