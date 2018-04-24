@@ -5,7 +5,7 @@ const currencyAPI = require('../../currency_exchange/main.js');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
-          msg.reply(msg.channel.send({
+          msg.channel.send({
             embed: {
               color: 3447003,
               description: "test menu help",
@@ -24,7 +24,8 @@ module.exports = {
                 text: "© remBot"
               }
             }
-        })+"\n test new line here");
+        });
+        msg.channel.send("newline here here here here");
           /*
         msg.delete(config.messageDeleteTime);
         currencyAPI.getLatestUpdate(function(result){
