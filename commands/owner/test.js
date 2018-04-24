@@ -25,7 +25,7 @@ module.exports = {
               }
             }
         });
-        msg.channel.send("<:question:>");
+        msg.react(":question:");
           /*
         msg.delete(config.messageDeleteTime);
         currencyAPI.getLatestUpdate(function(result){
