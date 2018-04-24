@@ -4,7 +4,7 @@ const fs = require('fs');
 function checkFileOwner(filename){
     try
    {
-       return fs.statSync("../commands/owner/"+filename+".js").isFile();
+       return fs.statSync("./commands/owner/"+filename+".js").isFile();
    }
    catch (err)
    {
