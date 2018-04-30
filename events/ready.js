@@ -1,4 +1,3 @@
-const config = require('../config.json');
 const botStatus = require('../bot_status/main.js');
 module.exports = {
   run : client => {
