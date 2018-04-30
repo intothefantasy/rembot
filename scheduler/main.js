@@ -2,6 +2,7 @@ var CronJob = require('cron').CronJob;
 const config = require('../config.json');
 const currencyAPI = require('../currency_exchange/main.js');
 const db = require('../db/main.js');
+const botStatus = require('../bot_status/main.js');
 
 module.exports = {
     dailyReset : function(client){
@@ -58,6 +59,17 @@ module.exports = {
           onTick: function() {
               client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " 9pm quest last call 30mins left");
               console.log("9pm quest last call 30mins left");
+          },
+          start: true,
+          timeZone: config.timeZone
+      });
+    },
+
+    randomBotStatusUpdate : function(client){
+      new CronJob({
+          cronTime: config.cronJobTimeForUpdateBotStatus,
+          onTick: function() {
+              console.log(botStatus.getBotStatus());
           },
           start: true,
           timeZone: config.timeZone
