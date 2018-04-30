@@ -8,12 +8,24 @@
   "readAbleFormatDate": "MMMM Do YYYY, h:mm:ss a",
   "dbFormatDate": "YYYY-MM-DD H:mm:ss",
 	"cotdDateFormat": "MMMM Do YYYY",
-  "botActivity" : "with Ram",
 	"cotdURL" : "https://ws-tcg.com/todays-card/",
 	"wsURL" : "https://ws-tcg.com",
-	"botStatus": ["with Ram", "Monster Hunter World", "Kantai Collection", "AzurLane"],
+	"botStatus": ["with Ram",
+								"Monster Hunter World",
+								"Kantai Collection",
+								"AzurLane",
+								"Stalking Currency Market",
+								"Weiss Schwarz"
+							],
   "currencyliveQuery": {
-    "currencies": ["JPY", "MYR", "AUD", "SGD", "THB", "TWD", "CNY"]
+    "currencies": ["JPY",
+									"MYR",
+									"AUD",
+									"SGD",
+									"THB",
+									"TWD",
+									"CNY"
+								]
   },
   "cronJobTimeForDailyReset" : "00 00 23 * * *",
   "cronJobTimeForPvP5Reset" : "00 00 17 * * *",
