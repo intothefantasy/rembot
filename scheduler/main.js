@@ -9,8 +9,8 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForDailyReset,
           onTick: function() {
-              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " Daily/PVP 11pm reset now");
-              console.log("Daily/PVP 11pm reset now");
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " "+config.cronJobTimeMsgForDailyReset);
+              console.log(config.cronJobTimeMsgForDailyReset);
           },
           start: true,
           timeZone: config.timeZone
@@ -21,8 +21,8 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForPvP5Reset,
           onTick: function() {
-              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " PVP 5pm reset now");
-              console.log("PVP 5pm reset now");
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " "+config.cronJobTimeMsgForPvP5Reset);
+              console.log(config.cronJobTimeMsgForPvP5Reset);
           },
           start: true,
           timeZone: config.timeZone
@@ -33,8 +33,8 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForPvP11Reset,
           onTick: function() {
-              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " PVP 11am reset now");
-              console.log("PVP 11am reset now");
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " "+config.cronJobTimeMsgForPvP11Reset);
+              console.log(config.cronJobTimeMsgForPvP11Reset);
           },
           start: true,
           timeZone: config.timeZone
@@ -45,8 +45,8 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForNight9PMQuest,
           onTick: function() {
-              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " 9pm quest resets now");
-              console.log("9pm quest resets now");
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " "+config.cronJobTimeMsgForNight9PMQuest);
+              console.log(config.cronJobTimeMsgForNight9PMQuest);
           },
           start: true,
           timeZone: config.timeZone
@@ -57,8 +57,8 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForNight9PMQuestLastCall,
           onTick: function() {
-              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " 9pm quest last call 30mins left");
-              console.log("9pm quest last call 30mins left");
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " "+config.cronJobTimeMsgForNight9PMQuestLastCall);
+              console.log(config.cronJobTimeMsgForNight9PMQuestLastCall);
           },
           start: true,
           timeZone: config.timeZone
