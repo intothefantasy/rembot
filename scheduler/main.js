@@ -69,8 +69,9 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForUpdateBotStatus,
           onTick: function() {
-              client.user.setActivity(botStatus.getBotStatus());
-              console.log("updated bot status = "+botStatus.getBotStatus());
+              let newBotStatus = botStatus.getBotStatus();
+              client.user.setActivity(newBotStatus);
+              console.log("updated bot status = "+newBotStatus);
           },
           start: true,
           timeZone: config.timeZone
