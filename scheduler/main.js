@@ -40,6 +40,30 @@ module.exports = {
       });
     },
 
+    night9PMQuest : function(client){
+      new CronJob({
+          cronTime: config.cronJobTimeForNight9PMQuest,
+          onTick: function() {
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " 9pm quest resets now");
+              console.log("9pm quest resets now");
+          },
+          start: true,
+          timeZone: config.timeZone
+      });
+    },
+
+    night9PMQuestLastCall : function(client){
+      new CronJob({
+          cronTime: config.cronJobTimeForNight9PMQuestLastCall,
+          onTick: function() {
+              client.channels.get(config.generalChatID).send(client.guilds.first().roles.find('name', config.azurLaneRole).toString() + " 9pm quest last call 30mins left");
+              console.log("9pm quest last call 30mins left");
+          },
+          start: true,
+          timeZone: config.timeZone
+      });
+    },
+
     updateCurrencyDB : function(){
       new CronJob({
           cronTime: config.cronJobTimeForUpdateCurrencyDB,
