@@ -82,7 +82,7 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForOwnerDaily,
           onTick: function() {
-            client.message.send(config.tatsumakiDailyCommand+" <@"+config.ownerID+">");
+            client.channels.get(config.generalChatID).send(config.tatsumakiDailyCommand+" <@"+config.ownerID+">");
           },
           start: true,
           timeZone: config.timeZone
