@@ -6,7 +6,7 @@ module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
 
-        console.log(client.users.get("name", "RoryRemMercury").toString());
+        console.log(client.users.find("name", "RoryRemMercury").toString());
         /*
           msg.channel.send({
             embed: {
