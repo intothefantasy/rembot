@@ -5,8 +5,7 @@ const currencyAPI = require('../../currency_exchange/main.js');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
-
-        console.log(client.users.get("name", "RoryRemMercury").id);
+        msg.channel.send("<@"+config.ownerID+">");
         /*
           msg.channel.send({
             embed: {
