@@ -5,6 +5,7 @@
 	"generalChatID" : "151947800513478656",
   "ownerName" : "RoryRemMercury",
 	"ownerID" : "134218141243801600",
+	"tatsumakiDailyCommand" : "t!dailies",
   "azurLaneRole": "AzurLane",
   "readAbleFormatDate": "MMMM Do YYYY, h:mm:ss a",
   "dbFormatDate": "YYYY-MM-DD H:mm:ss",
