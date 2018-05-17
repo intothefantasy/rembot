@@ -78,6 +78,17 @@ module.exports = {
       });
     },
 
+    getDailyForOwner : function(client){
+      new CronJob({
+          cronTime: config.cronJobTimeForOwnerDaily,
+          onTick: function() {
+      
+          },
+          start: true,
+          timeZone: config.timeZone
+      });
+    },
+
     updateCurrencyDB : function(){
       new CronJob({
           cronTime: config.cronJobTimeForUpdateCurrencyDB,

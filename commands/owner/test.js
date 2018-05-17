@@ -5,6 +5,9 @@ const currencyAPI = require('../../currency_exchange/main.js');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
+
+        console.log(client.users.get("name", "RoryRemMercury".toString()));
+        /*
           msg.channel.send({
             embed: {
               color: 3447003,
@@ -28,7 +31,7 @@ module.exports = {
             message.react("❓");
         });
 
-          /*
+
         msg.delete(config.messageDeleteTime);
         currencyAPI.getLatestUpdate(function(result){
           console.log(result);
