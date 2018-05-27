@@ -36,7 +36,6 @@
 	"cronJobTimeForUpdateBotStatus" : "0 0 */4 * * *",
 	"cronJobTimeForNight9PMQuest" : "00 00 21 * * *",
 	"cronJobTimeForNight9PMQuestLastCall" : "00 30 01 * * *",
-	"cronJobTimeForOwnerDaily" : "00 30 09 * * *",
 	"cronJobTimeMsgForDailyReset" : "Daily/PVP 11pm reset now",
   "cronJobTimeMsgForPvP5Reset" : "PVP 5pm reset now",
   "cronJobTimeMsgForPvP11Reset" : "PVP 11am reset now",

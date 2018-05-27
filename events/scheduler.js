@@ -6,7 +6,6 @@ module.exports = {
         scheduler.night9PMQuest(client);
         scheduler.randomBotStatusUpdate(client);
         scheduler.night9PMQuestLastCall(client);
-        scheduler.getDailyForOwner(client);
         scheduler.updateCurrencyDB();
         //scheduler.testSchedule();
     }
