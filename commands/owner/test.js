@@ -7,6 +7,7 @@ module.exports = {
     run: (args, client, msg, isOwner) => {
         if (isOwner) {
             console.log(msg.author.id);
+            console.log(msg.author.username);
 
             /*
             msg.channel.send("<@"+config.ownerID+">");
