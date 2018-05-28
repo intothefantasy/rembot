@@ -38,6 +38,10 @@ module.exports = {
                                 },
                                 fields: [
                                   {
+                                      name: "Card Condition",
+                                      value: cardStatus
+                                  },
+                                  {
                                     name: "Card URL",
                                     value: yytURL
                                   },
@@ -56,34 +60,6 @@ module.exports = {
                                 }
                               }
                             });
-
-                            msg.reply(msg.channel.send({
-                              embed: {
-                                color: 3447003,
-                                description: yytCardName,
-                                "image": {
-                                  "url": config.yytURL + "" + yytImg
-                                },
-                                fields: [
-                                  {
-                                    name: "Card URL",
-                                    value: yytURL
-                                  },
-                                  {
-                                    name: "Card Price",
-                                    value: yytPrice
-                                  },
-                                  {
-                                  name: "Card Stock",
-                                  value: yytStock
-                                }],
-                                timestamp: new Date(),
-                                footer: {
-                                  icon_url: client.user.avatarURL,
-                                  text: "© remBot"
-                                }
-                              }
-                            }));
                         } else {
                             //client.users.get(config.ownerID).send("No Stock");
                         }
