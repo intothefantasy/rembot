@@ -19,6 +19,7 @@ module.exports = {
                         let yytAvailable = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
                         if(yytAvailable === 'true') {
                             console.log("Availabile");
+                            client.users.get(config.ownerID).send("Stock");
                             if(config.yuyuteiTrackingURL[i].indexOf("&kizu=1") > -1) {
                                 console.log("Damaged");
                             } else {
@@ -26,6 +27,7 @@ module.exports = {
                             }
                         } else {
                             console.log("No Stock");
+                            client.users.get(config.ownerID).send("No Stock");
                         }
                     });
                 }, 1000);
