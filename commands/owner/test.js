@@ -12,6 +12,7 @@ module.exports = {
                console.log($('.image_box').find('p[class=image] img').attr('src'));
                console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
                console.log($('.price_box').find('p[class=stock]').text().replace(/\s+/g, ''));
+               console.log($('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'));
           });
         /*
         msg.channel.send("<@"+config.ownerID+">");
