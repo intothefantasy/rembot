@@ -18,9 +18,9 @@ module.exports = {
                         let yytPrice = $('.price_box').find('p[class=price]').text().replace(/\s+/g, '');
                         let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
                         let yytCartButton = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
-                        let yytOutOfStock = yytCartButton.replace(/\s+/g, '');
-                        console.log(yytOutOfStock);
-                        if(yytOutOfStock === 'false') {
+                        //let yytOutOfStock = yytCartButton.replace(/\s+/g, '');
+                        console.log(yytCartButton);
+                        if(!yytCartButton) {
                             console.log("Availabile");
                             let cardStatus = "";
                             //client.users.get(config.ownerID).send("Stock");
