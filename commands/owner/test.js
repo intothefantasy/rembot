@@ -17,8 +17,8 @@ module.exports = {
                         let yytCardName = $('.image_box').find('img').first().attr('alt');
                         let yytPrice = $('.price_box').find('p[class=price]').text().replace(/\s+/g, '');
                         let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
-                        let yytAvailable = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
-                        if(yytAvailable === 'true') {
+                        let yytAddToCart = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
+                        if(yytAddToCart === 'false') {
                             console.log("Availabile");
                             let cardStatus = "";
                             //client.users.get(config.ownerID).send("Stock");
