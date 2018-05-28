@@ -3,6 +3,7 @@ const config = require('../config.json');
 const currencyAPI = require('../currency_exchange/main.js');
 const db = require('../db/main.js');
 const botStatus = require('../bot_status/main.js');
+const yuyutei = require('../yuyutei/main.js');
 
 module.exports = {
     dailyReset : function(client){
@@ -69,7 +70,7 @@ module.exports = {
       new CronJob({
           cronTime: config.cronJobTimeForYYTCardTracking,
           onTick: function() {
-
+            yuyutei.yuyuteiCardTracker(client);
           },
           start: true,
           timeZone: config.timeZone
