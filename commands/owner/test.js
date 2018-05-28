@@ -28,7 +28,6 @@ module.exports = {
                                 cardStatus = "New";
                             }
 
-
                             client.users.get(config.ownerID).send({
                               embed: {
                                 color: 3447003,
