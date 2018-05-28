@@ -7,13 +7,16 @@ const cheerio = require('cheerio');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
-          snekFetch.get("https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10010&MODE=sell").then((result) => {
-               let $ = cheerio.load(result.text);
-               console.log($('.image_box').find('p[class=image] img').attr('src'));
-               console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
-               console.log($('.price_box').find('p[class=stock]').text().replace(/\s+/g, ''));
-               console.log($('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'));
-          });
+          for(let i = 0; i<=config.yuyuteiTrackingURL; i++){
+              snekFetch.get(config.yuyuteiTrackingURL[i]).then((result) => {
+                   let $ = cheerio.load(result.text);
+                   console.log($('.image_box').find('p[class=image] img').attr('src'));
+                   console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
+                   console.log($('.price_box').find('p[class=stock]').text().replace(/\s+/g, ''));
+                   console.log($('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'));
+              });
+          }
+
         /*
         msg.channel.send("<@"+config.ownerID+">");
 
