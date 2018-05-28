@@ -8,7 +8,7 @@ module.exports = {
         if (isOwner) {
             console.log(msg.author.id);
             console.log(msg.author.username);
-            console.log(msg.author.discriminator);
+            console.log(msg.author.presence);
             /*
             msg.channel.send("<@"+config.ownerID+">");
 
