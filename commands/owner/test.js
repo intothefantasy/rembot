@@ -7,7 +7,7 @@ const cheerio = require('cheerio');
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
-          snekFetch.get("https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell").then((result) => {
+          snekFetch.get("https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10010&MODE=sell").then((result) => {
                let $ = cheerio.load(result.text);
                console.log($('.image_box').find('p[class=image] img').attr('src'));
                console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
