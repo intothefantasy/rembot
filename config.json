@@ -12,6 +12,7 @@
     "cotdDateFormat": "MMMM Do YYYY",
     "cotdURL": "https://ws-tcg.com/todays-card/",
     "wsURL": "https://ws-tcg.com",
+	"yytURL" : "https://yuyu-tei.jp",
     "botStatus": ["with Ram",
         "Monster Hunter World",
         "Kantai Collection",
@@ -34,6 +35,7 @@
     "cronJobTimeForPvP11Reset": "00 00 11 * * *",
     "cronJobTimeForUpdateCurrencyDB": "00 59 * * * 1-5",
     "cronJobTimeForUpdateBotStatus": "0 0 */4 * * *",
+	"cronJobTimeForYYTCardTracking": "0 0 */1 * * *",
     "cronJobTimeForNight9PMQuest": "00 00 21 * * *",
     "cronJobTimeForNight9PMQuestLastCall": "00 30 01 * * *",
     "cronJobTimeMsgForDailyReset": "Daily/PVP 11pm reset now",
@@ -42,7 +44,7 @@
     "cronJobTimeMsgForNight9PMQuest": "9pm quest resets now",
     "cronJobTimeMsgForNight9PMQuestLastCall": "9pm quest last call 30mins left",
     "currencyDBName": "./.data/currency_list.sqlite",
-    "yuyuteiTrackingURL": ["https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell",
+    "yuyuteiTrackingURL": ["https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10010&MODE=sell",
         "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell&kizu=1"
     ]
 }

@@ -65,6 +65,18 @@ module.exports = {
       });
     },
 
+    yytCardTracking : function(client){
+      new CronJob({
+          cronTime: config.cronJobTimeForYYTCardTracking,
+          onTick: function() {
+
+          },
+          start: true,
+          timeZone: config.timeZone
+      });
+    },
+
+
     randomBotStatusUpdate : function(client){
       new CronJob({
           cronTime: config.cronJobTimeForUpdateBotStatus,
@@ -77,7 +89,7 @@ module.exports = {
           timeZone: config.timeZone
       });
     },
-    
+
     updateCurrencyDB : function(){
       new CronJob({
           cronTime: config.cronJobTimeForUpdateCurrencyDB,
