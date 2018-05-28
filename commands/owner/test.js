@@ -1,12 +1,19 @@
 const config = require("../../config.json");
 const db = require('../../db/main.js');
 const currencyAPI = require('../../currency_exchange/main.js');
+const snekFetch = require('snekfetch');
+const cheerio = require('cheerio');
 
 module.exports = {
   run : (args, client, msg, isOwner) => {
       if(isOwner){
-        msg.channel.send("<@"+config.ownerID+">");
+          snekFetch.get("https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell").then((result) => {
+               let $ = cheerio.load(result.text);
+               console.log($('.image_box p').find('p[class=image]').attr('src'));
+          });
         /*
+        msg.channel.send("<@"+config.ownerID+">");
+
           msg.channel.send({
             embed: {
               color: 3447003,
