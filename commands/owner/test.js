@@ -11,18 +11,19 @@ module.exports = {
                 setTimeout(function() {
                     snekFetch.get(config.yuyuteiTrackingURL[i]).then((result) => {
                         let $ = cheerio.load(result.text);
-                        if(config.yuyuteiTrackingURL[i].indexOf("&kizu=1") > -1) {
-                            console.log("Damaged");
-                        } else {
-                            console.log("New");
-                        }
+
                         let yytURL = config.yuyuteiTrackingURL[i];
                         let yytImg = $('.image_box').find('img').first().attr('src');
                         let yytPrice = $('.price_box').find('p[class=price]').text().replace(/\s+/g, '');
                         let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
                         let yytAvailable = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
-                        if(yytAvailable) {
+                        if(yytAvailable === 'true') {
                             console.log("Availabile");
+                            if(config.yuyuteiTrackingURL[i].indexOf("&kizu=1") > -1) {
+                                console.log("Damaged");
+                            } else {
+                                console.log("New");
+                            }
                         } else {
                             console.log("No Stock");
                         }
