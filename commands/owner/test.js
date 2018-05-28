@@ -16,10 +16,16 @@ module.exports = {
                         } else {
                             console.log("New");
                         }
-                        console.log($('.image_box').find('img').first().attr('src'));
-                        console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
-                        console.log($('.price_box').find('p[class=stock]').text().replace(/\s+/g, ''));
-                        console.log($('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'));
+                        let yytURL = config.yuyuteiTrackingURL[i];
+                        let yytImg = $('.image_box').find('img').first().attr('src');
+                        let yytPrice = $('.price_box').find('p[class=price]').text().replace(/\s+/g, '');
+                        let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
+                        let yytAvailable = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
+                        if(yytAvailable) {
+                            console.log("Availabile");
+                        } else {
+                            console.log("No Stock");
+                        }
                     });
                 }, 1000);
             }
