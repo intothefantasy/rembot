@@ -11,6 +11,11 @@ module.exports = {
                 setTimeout(function() {
                     snekFetch.get(config.yuyuteiTrackingURL[i]).then((result) => {
                         let $ = cheerio.load(result.text);
+                        if(config.yuyuteiTrackingURL[i].indexOf("&kizu=1") > -1) {
+                            console.log("Damaged");
+                        } else {
+                            console.log("New");
+                        }
                         console.log($('.image_box').find('img').first().attr('src'));
                         console.log($('.price_box').find('p[class=price]').text().replace(/\s+/g, ''));
                         console.log($('.price_box').find('p[class=stock]').text().replace(/\s+/g, ''));
