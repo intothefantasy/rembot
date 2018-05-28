@@ -19,7 +19,7 @@ module.exports = {
                         let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
                         let yytAddToCart = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
                         console.log(yytAddToCart);
-                        if(yytAddToCart === 'false') {
+                        if(yytAddToCart.replace(/\s+/g, '') === 'false') {
                             console.log("Availabile");
                             let cardStatus = "";
                             //client.users.get(config.ownerID).send("Stock");
