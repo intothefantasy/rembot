@@ -10,6 +10,8 @@ module.exports = {
           snekFetch.get("https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell").then((result) => {
                let $ = cheerio.load(result.text);
                console.log($('.image_box').find('p[class=image] img').attr('src'));
+               console.log($('.price_box').find('p[class=price]').text());
+               console.log($('.price_box').find('p[class=stock]').text());
           });
         /*
         msg.channel.send("<@"+config.ownerID+">");
