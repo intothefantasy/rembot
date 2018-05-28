@@ -17,18 +17,46 @@ module.exports = {
                         let yytCardName = $('.image_box').find('img').first().attr('alt');
                         let yytPrice = $('.price_box').find('p[class=price]').text().replace(/\s+/g, '');
                         let yytStock = $('.price_box').find('p[class=stock]').text().replace(/\s+/g, '');
-                        let yytCartButton = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
-                        //let yytOutOfStock = yytCartButton.replace(/\s+/g, '');
-                        console.log(yytCartButton);
-                        if(!yytCartButton) {
-                            console.log("Availabile");
+                        let yytOutOfStock = $('.price_box').find('p[class=cart] input[type="image"]').prop('disabled'); // true or false
+
+                        if(!yytOutOfStock) {
                             let cardStatus = "";
-                            //client.users.get(config.ownerID).send("Stock");
+
                             if(config.yuyuteiTrackingURL[i].indexOf("&kizu=1") > -1) {
                                 cardStatus = "Damaged";
                             } else {
                                 cardStatus = "New";
                             }
+
+
+                            client.users.get(config.ownerID).send({
+                              embed: {
+                                color: 3447003,
+                                description: yytCardName,
+                                "image": {
+                                  "url": config.yytURL + "" + yytImg
+                                },
+                                fields: [
+                                  {
+                                    name: "Card URL",
+                                    value: yytURL
+                                  },
+                                  {
+                                    name: "Card Price",
+                                    value: yytPrice
+                                  },
+                                  {
+                                  name: "Card Stock",
+                                  value: yytStock
+                                }],
+                                timestamp: new Date(),
+                                footer: {
+                                  icon_url: client.user.avatarURL,
+                                  text: "© remBot"
+                                }
+                              }
+                            });
+
                             msg.reply(msg.channel.send({
                               embed: {
                                 color: 3447003,
@@ -57,7 +85,6 @@ module.exports = {
                               }
                             }));
                         } else {
-                            console.log("No Stock");
                             //client.users.get(config.ownerID).send("No Stock");
                         }
                     });
