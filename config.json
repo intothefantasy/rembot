@@ -45,6 +45,11 @@
     "cronJobTimeMsgForNight9PMQuest": "9pm quest resets now",
     "cronJobTimeMsgForNight9PMQuestLastCall": "9pm quest last call 30mins left",
     "currencyDBName": "./.data/currency_list.sqlite",
-    "yuyuteiTrackingURL": ["https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell&kizu=1"
+    "yuyuteiTrackingURL": [
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=animelb&CID=10074&MODE=sell&kizu=1",
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10029&MODE=sell&kizu=1",
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lb&CID=10147&MODE=sell&kizu=1",
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lb&CID=10147&MODE=sell",
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=dcvslblb&CID=10067&MODE=sell&kizu=1"
     ]
 }
