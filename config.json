@@ -36,7 +36,7 @@
     "cronJobTimeForPvP11Reset": "00 00 11 * * *",
     "cronJobTimeForUpdateCurrencyDB": "00 59 * * * 1-5",
     "cronJobTimeForUpdateBotStatus": "0 0 */4 * * *",
-	"cronJobTimeForYYTCardTracking": "0 0 */1 * * *",
+	  "cronJobTimeForYYTCardTracking": "0 0 */1 * * *",
     "cronJobTimeForNight9PMQuest": "00 00 21 * * *",
     "cronJobTimeForNight9PMQuestLastCall": "00 30 01 * * *",
     "cronJobTimeMsgForDailyReset": "Daily/PVP 11pm reset now",
@@ -50,6 +50,7 @@
       "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10029&MODE=sell&kizu=1",
       "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lb&CID=10147&MODE=sell&kizu=1",
       "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lb&CID=10147&MODE=sell",
-      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=dcvslblb&CID=10067&MODE=sell&kizu=1"
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=dcvslblb&CID=10067&MODE=sell&kizu=1",
+      "https://yuyu-tei.jp/game_ws/carddetail/cardpreview.php?VER=lbext1.0&CID=10011&MODE=sell"
     ]
 }
