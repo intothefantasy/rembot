@@ -11,8 +11,8 @@ app.get("/", (request, response) => {
   console.log( moment().tz(config.timeZone).format(config.readAbleFormatDate)+ " Ping Received");
   response.sendStatus(200);
 });
-app.get("/views", (request, response) => {
-  response.sendFile(__dirname + '/views/index.html');
+app.get("/currency", (request, response) => {
+  response.sendFile(__dirname + '/currency_exchange/index.html');
 });
 
 app.listen(process.env.PORT);
