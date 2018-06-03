@@ -2,7 +2,7 @@ const config = require("../../config.json");
 const db = require('../../db/main.js');
 const db1 = require('../../db/beta.js');
 const currencyAPI = require('../../currency_exchange/main.js');
-
+const moment = require('moment-timezone');
 
 module.exports = {
     run: (args, client, msg, isOwner) => {
@@ -12,6 +12,7 @@ module.exports = {
             console.log(msg.author.presence);
 
           db1.testGetOne().then(result => {
+            console.log(moment(result.date_time).format(config.readAbleFormatDate).toString());
             console.log(result.jpy);
           });
             /*
