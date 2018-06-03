@@ -11,9 +11,7 @@ module.exports = {
             console.log(msg.author.username);
             console.log(msg.author.presence);
 
-            db1.testGetOne().then(result =>
-              console.log(result.jpy)
-            );
+            console.log(db1.testGetOne());
             /*
             msg.channel.send("<@"+config.ownerID+">");
 
