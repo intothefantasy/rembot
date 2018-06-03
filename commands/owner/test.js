@@ -11,7 +11,7 @@ module.exports = {
             console.log(msg.author.username);
             console.log(msg.author.presence);
 
-          db1.testGetOne().then(result => {
+          db1.getOneResult().then(result => {
             console.log(moment(result.date_time).format(config.readAbleFormatDate).toString());
             console.log(result.jpy);
           });

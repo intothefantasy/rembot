@@ -8,18 +8,22 @@ var knex = require('knex')({
 });
 
 module.exports = {
-  testGetOne: function() {
-  return knex.select('*')
-  .from('currency_list')
-  .orderBy('rowid', 'desc')
-  .first()
-  .then(row => {
-    if (!row) {
-      console.log("no data");
-    } else {
-      return row;
-    }
-  })
-  .catch(function(error) { console.error(error); });
+  getOneResult: function() {
+    return knex.select('*')
+    .from('currency_list')
+    .orderBy('rowid', 'desc')
+    .first()
+    .then(row => {
+      if (!row) {
+        console.log("no data");
+      } else {
+        return row;
+      }
+    })
+    .catch(function(error) { console.error(error); });
+  },
+
+  insert: function(arrValues, tableName) {
+    return knex(tableName).returning('lastID').insert(arrValues);
   }
 };
