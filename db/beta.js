@@ -12,10 +12,10 @@ module.exports = {
   return knex.select('*')
   .from('currency_list')
   .orderBy('rowid', 'desc')
-  .limit(1)
+  .first()
   .then(row => {
     if (!row) {
-      return console.log("no data");
+      console.log("no data");
     } else {
       return row;
     }
