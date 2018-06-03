@@ -1,5 +1,6 @@
 const config = require("../../config.json");
 const db = require('../../db/main.js');
+const db1 = require('../../db/beta.js');
 const currencyAPI = require('../../currency_exchange/main.js');
 
 
@@ -9,6 +10,8 @@ module.exports = {
             console.log(msg.author.id);
             console.log(msg.author.username);
             console.log(msg.author.presence);
+
+            console.log(db1.testGetOne());
             /*
             msg.channel.send("<@"+config.ownerID+">");
 
