@@ -12,6 +12,13 @@ module.exports = {
   return knex.select('*')
   .from('currency_list')
   .orderBy('rowid', 'desc')
+  .then(row => {
+    if (!row) {
+      return console.log("no data");
+    } else {
+      return row;
+    }
+  })
   .catch(function(error) { console.error(error); });
   }
 };
