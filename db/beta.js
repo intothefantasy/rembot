@@ -9,12 +9,9 @@ var knex = require('knex')({
 
 module.exports = {
   testGetOne: function() {
-  knex.select('*')
+  return knex.select('*')
   .from('currency_list')
   .orderBy('rowid', 'desc')
-  .then(function(rows) {
-    return rows;
-  })
   .catch(function(error) { console.error(error); });
   }
 };
