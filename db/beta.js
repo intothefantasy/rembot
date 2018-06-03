@@ -9,7 +9,7 @@ var knex = require('knex')({
 
 module.exports = {
   testGetOne: function() {
-  return knex.select('*')
+  knex.select('*')
   .from('currency_list')
   .orderBy('rowid', 'desc')
   .then(function(rows) {
