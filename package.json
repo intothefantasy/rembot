@@ -21,7 +21,7 @@
     "cheerio": "^0.22.0",
     "query-string": "^6.0.0",
     "sqlite3": "^4.0.0",
-    "knex": "^0.14.6"
+    "knex": "^0.20.1"
   },
   "engines": {
     "node": "8.4.0"
